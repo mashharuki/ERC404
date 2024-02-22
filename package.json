@@ -1,0 +1,13 @@
+{
+  "name": "ERC404",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "backend": "pnpm -F \"backend\"",
+    "frontend": "pnpm -F \"frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
