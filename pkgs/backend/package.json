@@ -2,10 +2,14 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "npx hardhat compile",
+    "clean": "npx hardhat clean",
+    "test": "npx hardhat test",
+    "deploy:mumbai": "npx hardhat run scripts/deployToken.js --network mumbai && npx hardhat run scripts/deployMarketplace.js --network mumbai"
   },
   "keywords": [],
   "author": "",
