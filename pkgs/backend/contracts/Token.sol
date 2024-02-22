@@ -77,7 +77,6 @@ contract NFTMintDN404 is DN404, ERC20Permit, Ownable {
 
     /**
      * mint method
-     * @param amount 
      */
     function mint(
         uint256 amount

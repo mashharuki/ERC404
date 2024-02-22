@@ -156,7 +156,6 @@ contract NFTMarketplace is Context {
 
     /**
      * getProceeds method
-     * @param seller 
      */
     function getProceeds(address seller) external view returns (uint256) {
         return s_proceeds[seller];

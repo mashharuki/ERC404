@@ -1,15 +1,17 @@
-const { ethers } = require("hardhat");
-const fs = require("fs");
+import { ethers } from 'hardhat';
+import fs from "fs";
 
 async function main() {
 
-  const [deployer] = await ethers.getSigners();
+  console.log(` ============================================== [start] ================================================ `)
+
+  const accounts = await ethers.getSigners();
   const name = "Meta";
   const symbol = "META";
   const maxSupply = ethers.parseEther("50");
   const publicPrice = ethers.parseEther("0"); 
   const initialtokenSupply = ethers.parseEther("0"); 
-  const signer = deployer.address 
+  const signer = accounts[0].address 
 
   const argumentsArray = [name, symbol, maxSupply.toString(), publicPrice.toString(), initialtokenSupply.toString(), signer]
   const content = "module.exports = " + JSON.stringify(argumentsArray, null, 2) + ";";
@@ -17,7 +19,7 @@ async function main() {
 
   console.log("arguments.js file generated successfully.");
 
-  console.log("Deploying contracts with the account:", deployer.address);
+  console.log("Deploying contracts with the account:", signer);
 
   const Token = await ethers.getContractFactory("NFTMintDN404");
   const token = await Token.deploy(
@@ -29,7 +31,8 @@ async function main() {
     signer,
   );
 
-  console.log("Fractionalized NFT deployed to:", await token.getAddress());
+  console.log("Fractionalized NFT deployed to:", token.target);
+  console.log(` ============================================== [end] ================================================ `)
 }
 
 main()

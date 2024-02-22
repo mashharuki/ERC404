@@ -5,9 +5,16 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "backend": "pnpm -F \"backend\"",
-    "frontend": "pnpm -F \"frontend\""
+    "backend:compile": "yarn workspace backend compile",
+    "backend:clean": "yarn workspace backend clean",
+    "backend:test": "yarn workspace backend test",
+    "backend:deploy:mumbai": "yarn workspace backend deploy:mumbai",
+    "frontend:build": "yarn workspace frontend build",
+    "frontend:start": "yarn workspace frontend start"
   },
+  "workspaces": [
+    "pkgs/**"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC"
