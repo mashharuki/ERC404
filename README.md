@@ -7,13 +7,12 @@ ERC404調査用のリポジトリ
  ============================================== [start] ================================================ 
 arguments.js file generated successfully.
 Deploying contracts with the account: 0x51908F598A5e0d8F1A3bAbFa6DF76F9704daD072
-Fractionalized NFT deployed to: 0x26A2310EFDcB4909fCD8353Cf75E2Afe5BD22176
+Fractionalized NFT deployed to: 0x120c7120293081A0dDBEc00bA233e8B0556f74e9
  ============================================== [end] ================================================ 
  ============================================== [start] ================================================ 
 Deploying contracts with the account: 0x51908F598A5e0d8F1A3bAbFa6DF76F9704daD072
-NFT Marketplace deployed to: 0x3053DbB82103C55555D21C45DC5dC8364F451CBa
+NFT Marketplace deployed to: 0xA6e3DA861B20D83616Bbe91452cD22a16511F0cB
  =============================================== [end]  =============================================== 
-✨  Done in 11.05s.
 ```
 
 ### 参考文献

@@ -111,6 +111,23 @@ contract NFTMarketplace is Context {
     }
 
     /**
+     * updateListing method
+     */
+    function updateListing(
+        address nftAddress,
+        uint256 newPrice
+    )
+        external
+        isListed(nftAddress)
+        isOwner(nftAddress, _msgSender())
+    {
+        require(newPrice > 0, "Price must be above zero");
+
+        s_listings[nftAddress].price = newPrice;
+        emit LogItemListed(_msgSender(), nftAddress, newPrice);
+    }
+
+    /**
      * buyItem function
      */
     function buyItem(
